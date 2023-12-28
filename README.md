@@ -1,0 +1,1 @@
+Prvo pokrenuti pickle_images.py nad folderom sa slikama. Ovo sprema slike u bin obliku u fileove koji se koriste za citanje unutar FacesDataset klase
