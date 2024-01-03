@@ -1,13 +1,8 @@
-import os
+import pickle
 from typing import Any, Callable, Optional, Tuple
 
-import h5py
-import numpy as np
-import torch
 from PIL import Image
-from skimage.io import imread
 from torchvision.datasets import VisionDataset
-import pickle
 
 
 class FacesDataset(VisionDataset):
