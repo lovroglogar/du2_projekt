@@ -18,7 +18,7 @@ def pickle_images(root, dest):
 if __name__ == '__main__':
 
     ROOT = 'dub2_data' # Location of folders with images
-    IMAGE_FOLDERS = ['celeba_hq_256'] #, 'avg_blurred_images', 'gauss_blurred_images'] # folder names
+    IMAGE_FOLDERS = ['celeba_hq_256', 'avg_blurred_images', 'gauss_blurred_images'] # folder names
 
     for img_folder_name in IMAGE_FOLDERS:
         path = os.path.join(ROOT, img_folder_name)

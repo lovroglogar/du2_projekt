@@ -3,3 +3,5 @@ dub2_data
 __pycache__
 avg_blurred_images
 gauss_blurred_images
+avg_blurred_images_1
+pickled
