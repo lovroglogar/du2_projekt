@@ -35,7 +35,7 @@ def process_img(img, face_detection,method):
 
 
 # Set up output directories
-input_dir = './celeba_hq_256'
+input_dir = 'dub2_data/celeba_hq_256'
 output_gauss_dir = './gauss_blurred_images'
 output_avg_dir = './avg_blurred_images'
 
@@ -48,11 +48,17 @@ if not os.path.exists(output_avg_dir):
 mp_face_detection = mp.solutions.face_detection
 face_detection = mp_face_detection.FaceDetection(model_selection=0, min_detection_confidence=0.5)
 
+import torchvision
+import numpy as np
+from PIL import Image
+
 # Loop over each image in the dataset
 for filename in os.listdir(input_dir):
     if filename.lower().endswith(('.png', '.jpg', '.jpeg')):  # Checking file extension
         img_path = os.path.join(input_dir, filename)
         img = cv2.imread(img_path)
+        trans = torchvision.transforms.Compose([torchvision.transforms.Resize((64, 64))])
+        img = np.array(trans(Image.fromarray(img)))
 
         if img is not None:
             try:

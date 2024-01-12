@@ -1,3 +1,5 @@
 dub2_data
 .idea
 __pycache__
+avg_blurred_images
+gauss_blurred_images
